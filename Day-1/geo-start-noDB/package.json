@@ -1,0 +1,41 @@
+{
+  "name": "geostartnodb",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "tsc && node ./build/app.js",
+    "start:debug": "tsc && node --inspect ./build/app.js",
+    "build": "tsc",
+    "dev-DOES_NOT_WORK": "nodemon src/app.ts",
+    "dev": "nodemon --exec ts-node --files src/app.ts",
+    "geojson-utils": "nodemon --exec ts-node --files src/geoUtilsTester.ts",
+    "dev:debug_DOES_NOT_WORK": "nodemon --inspect ./src/app.ts"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "*"
+    ],
+    "ext": "ts",
+    "execMap": {
+      "ts": "node -r ts-node/register"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "geojson-utils": "^1.1.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^6.2.6",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
