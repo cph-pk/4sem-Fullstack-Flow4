@@ -1,0 +1,9 @@
+.env
+node_modules
+build
+
+# ignore all logs files
+logs/*
+
+# exception to the rule
+!logs/.gitkeep 
